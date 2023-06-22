@@ -8,11 +8,13 @@
 
 
 
-安装流程
+**安装流程：**
 
 1. 下载链接：[nvidia](https://developer.nvidia.com/nvidia-tensorrt-download)
 
 2. 下载好之后进行解压
+
+*这里需要注意一下`cuda`和`cudnn`的版本*
 
 ```shell
 tar -zxvf TensorRT-8.2.5.1.Linux.x86_64-gnu.cuda-11.3.cudnn8.2.tar.gz
