@@ -23,8 +23,8 @@ tar -zxvf TensorRT-8.2.5.1.Linux.x86_64-gnu.cuda-11.3.cudnn8.2.tar.gz
 3. 然后配置环境
 
 ```bash
-export LD_LIBRARY_PATH=/home/admin1/TensorRT-7.2.3.4/lib:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/admin1/TensorRT-7.2.3.4/lib::$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/admin1/TensorRT-8.2.5.1/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/admin1/TensorRT-8.2.5.1/lib::$LIBRARY_PATH
 ```
 
 4. 更新环境
