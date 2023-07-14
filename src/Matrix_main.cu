@@ -120,7 +120,6 @@ int main(int argc, char* argv[])
 
     initial(h_A, Axy);
     initial(h_B, Bxy);
-    printf("1");
 
     // 2.申请设备端内存
     float *d_A, *d_B, *d_C;
@@ -131,6 +130,12 @@ int main(int argc, char* argv[])
     cudaMemcpy(d_A, h_A, Axy * sizeof(float), cudaMemcpyHostToDevice);
 	cudaMemcpy(d_B, h_B, Bxy * sizeof(float), cudaMemcpyHostToDevice);
 
+    // 插入Event，测时间
+    float time_elapsed = 0;
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
     // 3.组织线程配置，调用核函数
     // int dimx = 2;
     // int dimy = 2;
@@ -139,9 +144,21 @@ int main(int argc, char* argv[])
     // multiplicateMatrixOnDevice<<<grid, block>>> (d_A, d_B, d_C, M, K, N);
     dim3 grid(width / BLOCK_SIZE, width / BLOCK_SIZE);
     dim3 block(BLOCK_SIZE, BLOCK_SIZE);
+    cudaEventRecord(start, 0);
     multiplicateMatrixShareMemory<<<grid, block>>> (d_A, d_B, d_C);
+    cudaEventRecord(stop, 0);
     cudaMemcpy(deviceRef, d_C, Cxy * sizeof(float), cudaMemcpyDeviceToHost);
-    printMatrix(deviceRef, M, N);
+    // printMatrix(deviceRef, M, N);
+
+    // 同步等待，计算最终时间
+    cudaEventSynchronize(start);
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&time_elapsed, start, stop);
+    printf("执行时间: %f(ms)\n", time_elapsed);
+
+    // 销毁
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
 
     cudaFree(d_A);
 	cudaFree(d_B);
