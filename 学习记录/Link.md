@@ -9,3 +9,5 @@
 [理想汽车 C++ 实习一面面经_牛客网 (nowcoder.com)](https://www.nowcoder.com/feed/main/detail/f457ae2bfd354d4ba6efce29420bef2b?sourceSSR=search)
 
 [CUDA论坛](https://bbs.gpuworld.cn/index.php?board=51.0)
+
+https://baijiahao.baidu.com/s?id=1766426326675215146&wfr=spider&for=pc
