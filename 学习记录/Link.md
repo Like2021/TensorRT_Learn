@@ -10,4 +10,8 @@
 
 [CUDA论坛](https://bbs.gpuworld.cn/index.php?board=51.0)
 
-https://baijiahao.baidu.com/s?id=1766426326675215146&wfr=spider&for=pc
+[视觉GPU推理服务部署架构优化实践](https://baijiahao.baidu.com/s?id=1766426326675215146&wfr=spider&for=pc)
+
+[Pytorch和CUDA联合编程的基本步骤](https://zhuanlan.zhihu.com/p/455079868)
+
+[Pytorch拓展C++和CUDA：讲解和细节](https://blog.csdn.net/hellyou/article/details/105382069)
