@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/cuda-11.3/include/**",
-                "/home/admin-main/TensorRT-8.0.3.4/include/**"
+                "/home/admin-main/TensorRT-8.0.3.4/include/**",
+                "/home/admin-main/TensorRT-8.0.3.4/samples/common"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
