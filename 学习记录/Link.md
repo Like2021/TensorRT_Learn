@@ -15,3 +15,5 @@
 [Pytorch和CUDA联合编程的基本步骤](https://zhuanlan.zhihu.com/p/455079868)
 
 [Pytorch拓展C++和CUDA：讲解和细节](https://blog.csdn.net/hellyou/article/details/105382069)
+
+[ubuntu创建新用户](https://cloud.cmy.cn/news/docs/77506.html)
